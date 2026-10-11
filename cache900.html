@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html manifest="900.manifest">
+<head>
+<title></title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script>
+history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="جاري تحميل كاش الهوست: " + Percent + "%";}
+function DisplayCacheProgress(){window.msgs.innerHTML="تم تحميل الكاش هوست ✔";setTimeout(function(){window.msgs.innerHTML="أخرج من المتصفح واغلق النت ثم ادخل المتصفح مرة أخرى ...";},1500);}
+window.applicationCache.addEventListener("progress",DLProgress,false);
+window.applicationCache.oncached=function(e){DisplayCacheProgress();};
+window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+window.applicationCache.onerror=function(e){window.msgs.innerHTML="يوجد مشكلة في تحميل الكاش  ...";};
+</script>
+<h1>هذا التعديل صالح  من اصدار  [5.05] 7.0 الى 13.52</h1>
+<br>
+<h1 id=msgs style="font-size: 30px;margin-top: 77px;margin-bottom: 455px;">جاري تحميل الكاش هوست</h1>
+</body>
+</html>
